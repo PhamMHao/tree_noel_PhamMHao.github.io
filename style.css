@@ -1,0 +1,116 @@
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'Fredoka', sans-serif;
+}
+#container{
+    position: relative;
+    width:100%;
+    height:100vh;
+    background-color: #151522;
+    overflow: hidden;
+}
+.content{
+    margin-top: 36px;
+    color: #fff;
+    text-align: center;
+}
+p{
+    padding: 0 14px;
+}
+.snow{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100px;
+    height:100px;
+    background-image: url(snow-re.png);
+    background-size: cover;
+    animation: animationSnow 10s ease-in-out infinite;
+}
+@keyframes animationSnow{
+    0%{
+        transform: translate(0,0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(100px,50vh);
+    }
+}
+
+svg {
+    margin-top: -600px;
+    width: 100%;
+    height: 100%;
+}
+.text {
+    padding-top: 420px;
+    font-size: 24px;
+    color: #fffefe;
+    text-align: center;
+    opacity: 0;
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+        typing 6s steps(40, end) forwards,
+        blink-caret .75s step-end forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+/* The typing effect */
+@keyframes santa {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #fff;
+    }
+}
+
+@media (min-width: 650px){
+    svg{
+        margin-top: -650px;
+        height: 560px;
+    }
+   
+    .text {
+        padding-top: 500px;
+    }
+    .content{
+        margin-top: 56px;
+    }
+}
